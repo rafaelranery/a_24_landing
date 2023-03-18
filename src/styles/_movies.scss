@@ -1,0 +1,31 @@
+@use 'variables';
+.movies {
+    overflow-x: hidden;
+    text-align: center;
+    
+    .title {
+        margin-top: 32px;
+    }
+
+    .text {
+
+        &--bg {
+            max-width: 70vw;
+            margin: 0 auto;
+            font-size: 38px;
+        }
+    }
+
+    &__carousel {
+        margin: 32px 0;
+        
+        img {
+            width: auto;
+            margin: 0 16px;
+            height: 100%;
+
+            border-radius: 4px;
+            box-shadow: 0px 0px 25px rgba(darken(variables.$colorBg, 5%), 0.8);
+        }
+    }
+}
