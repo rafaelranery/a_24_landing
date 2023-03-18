@@ -1,9 +1,46 @@
+@use 'hero';
+@use 'variables';
+
 * {
     margin: 0;
-
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    color: red;
-    font-size: 82px;
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize 8px;
+    color: variables.$colorTextDark;
+}
+
+.title {
+    font-family: variables.$fontTitle;
+    @include text(32px);
+
+    &--sm {
+        @include text(28px);
+    }
+
+    &--bg {
+        @include text(38px);
+    }
+}
+
+.text {
+    font-family: variables.$fontText;
+    @include text(16px);
+
+    &--sm {
+        @include text(12px);
+    }
+
+    &--bg {
+        @include text(18px);
+    }
+}
+
+.btn {
+    background-color: variables.$colorTextDark;
+    color: variables.$colortextLigh;
+    font-weight: bold;
 }
