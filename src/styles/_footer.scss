@@ -1,0 +1,59 @@
+@use 'variables';
+
+.footer {
+    text-align: center;
+    background-color: variables.$colortextLigh;
+    padding-top: 24px;
+    display: flex;
+    
+
+    img {
+        max-width: 120px;
+    }
+
+
+    &__links {
+        margin-bottom: 0;
+        padding: 24px 8em;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__item {
+
+            &__link {
+                margin: 0;
+                text-decoration: none;
+                padding: 4px;
+
+                &:hover {
+                    border-bottom: 1px solid lighten(variables.$colorTextDark,  0.5);
+                }
+            }
+
+            &__select {
+                padding: 4px;
+                border-radius: 6px;
+                margin: 0 12px;
+
+            }
+        }
+    }
+
+    &__meta {
+        align-items: center;
+        justify-content: space-between;
+        background-color: variables.$colorTextDark;
+
+        p, a {
+            color: variables.$colortextLigh;
+            text-decoration: none;
+        }
+        p {
+            margin: 0 24px;
+        }
+        a {
+            margin-right: 24px;
+        }
+    }
+}
