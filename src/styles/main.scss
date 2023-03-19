@@ -3,6 +3,7 @@
 @use 'movies';
 @use 'awards';
 @use 'faq';
+@use 'store';
 
 * {
     margin: 0;
@@ -50,4 +51,9 @@ body {
     background-color: variables.$colorTextDark;
     color: variables.$colortextLigh;
     font-weight: bold;
+
+    &:hover {
+        background-color: variables.$colorBg;
+        border: 1px solid variables.$colorTextDark;
+    }
 }

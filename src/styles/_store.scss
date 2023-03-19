@@ -1,0 +1,54 @@
+@use 'variables';
+
+.store {
+    text-align: center;
+    
+    
+
+    &__list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 90px;
+        padding: 24px 64px;
+        
+        &__product {
+            border: 2px solid variables.$colorTextDark;
+            border-radius: 16px;
+            padding: 12px;
+
+            img {
+                width: 100%;
+                border-radius: 16px;
+            }
+
+            &__name {
+                margin-top: 24px;
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+
+            &__description {
+                margin-bottom: 12px;
+
+            }
+
+            &__price {
+                font-weight: bold;
+                letter-spacing: 2px;
+                font-size: 22px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 12px 0;
+                font-size: 18px;
+            }
+        }
+    }
+    .title {
+        margin: 64px 0 12px;
+    }
+    
+
+}
