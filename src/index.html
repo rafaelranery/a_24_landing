@@ -20,7 +20,25 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <section class="hero">
+    <header class="header header--is-hidden">
+        <nav class="header__nav">
+            <ul class="header__nav__list d-flex">
+                <li class="header__nav__list__item">
+                    <a class="text" href="#hero">Home</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a class="text" href="#movies">Movies</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a class="text" href="#awards">About us</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a class="text" href="#store">Store</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" id="hero">
         <img class="hero__bg" src="img/hero_bg.jpg" alt="Midsommar Frame">
         <div class="hero__about">
             <img src="img/A24_logo.svg" alt="A24 Logo">
@@ -39,7 +57,7 @@
         
     </section>
 
-    <section class="movies">
+    <section class="movies" id="movies">
         <h2 class="title title--bg" >Our most credited movies:</h2>
         <div class="movies__carousel">
             <img src="img/movies/aftersun_poster.jpg" alt="">
@@ -57,7 +75,7 @@
         </p>
     </section>
 
-    <section class="awards">
+    <section class="awards" id="awards">
         <div class="container">
             <div class="awards__icons">
                 <img src="img/awards/oscar-seeklogo.com.svg" alt="" class="awards__icons__img">
@@ -103,7 +121,7 @@
         </div>
     </section>
     
-    <section class="store">
+    <section class="store" id="store">
         <div class="container">
             <h2 class="title title--bg">Be part of the club!</h2>
             <p class="text">Take a peek at our specially designed products:</p>

@@ -1,0 +1,43 @@
+@use 'variables';
+
+.header {
+    background-color: variables.$colortextLigh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: background-color 1s ease;
+
+    &__nav {
+
+        &__list {
+            justify-content: space-between;
+            width: 60%;
+            margin: 0 auto;
+            list-style: none;
+
+            &__item {
+                padding: 12px 0;
+                a {
+                    text-decoration: none;
+
+                }
+            }
+        }
+    }
+
+    &--is-hidden {
+        background-color: transparent;
+        transition: background-color 1s ease;
+        height: 0;
+
+        .header {
+
+            &__nav {
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+        }
+
+    }
+}

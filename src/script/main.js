@@ -34,10 +34,36 @@ document.addEventListener('DOMContentLoaded', function() {
         btnNews.classList.add('disabled');
         
     })
+
+    /* header animation */
+    const heroSct = document.querySelector('.hero');
+    const heroHeight = heroSct.clientHeight;
+
+    let headerElement = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function() {
+        let scrollActual = window.scrollY;
+        
+        if (scrollActual < heroHeight) {
+            headerHid();
+        } else {
+            headerShow();
+        }
+    })
 })
 
 function toggleFaq(elemento) {
     const faqOppener = 'faq__questions__item--is-open';
     const faqItem = elemento.target.parentNode;
     faqItem.classList.toggle(faqOppener)
+}
+
+function headerHid() {
+    let header = document.querySelector('.header');
+    header.classList.add('header--is-hidden');
+}
+
+function headerShow() {
+    let header = document.querySelector('.header');
+    header.classList.remove('header--is-hidden');
 }

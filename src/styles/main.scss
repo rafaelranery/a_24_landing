@@ -5,6 +5,7 @@
 @use 'faq';
 @use 'store';
 @use 'footer';
+@use 'header';
 
 * {
     margin: 0;
@@ -57,4 +58,8 @@ body {
         background-color: variables.$colorBg;
         border: 1px solid variables.$colorTextDark;
     }
+}
+
+a:hover {
+    border-bottom: 1px solid lighten(variables.$colorTextDark,  0.5);
 }
