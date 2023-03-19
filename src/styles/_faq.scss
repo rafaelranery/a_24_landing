@@ -1,0 +1,52 @@
+@use 'variables';
+
+.faq {
+    &__questions {
+        margin-top: 24px;
+        display: block;
+        
+        &__item {
+            list-style: none;
+            margin-top: 16px;
+            margin-bottom: 32px;
+            background-color: variables.$colortextLigh;
+            border-radius: 8px;
+            box-shadow: 5px 0 1px 0 variables.$colorTextDark;
+
+            &__question {
+                cursor: pointer;
+                border-bottom: 1px solid variables.$colorBg;
+                
+                &::after {
+                    display: flex;
+                    align-items: center;
+                    content: '+';
+                    font-size: 24px;
+                    float: right;
+                    margin-right: 12px;
+                }
+            }
+
+            &__answer {
+                /* height 0 para 'hidden' da transição para abrir faq */
+                height: 0;
+                overflow: hidden;
+                
+            }
+
+            /* Classe do item aberto, aqui alteramos a classe dentro dele, asism alteramos várias classes e não precisamos aplicar diversas classes no js */
+        
+            &--is-open {
+                .faq__questions__item__answer {
+                    height: auto;
+                    margin: 24px 12px 6px;
+                }
+                .faq__questions__item__question::after {
+                    content: '-';
+                }
+            }
+        }
+    }
+
+
+}
