@@ -1,0 +1,31 @@
+.awards {
+    padding-top: 3em;
+    padding: 3em;
+
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+    }
+    &__icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        &__img {
+            max-width: 100%;
+            width: 120px;
+        }
+    }
+
+    &__about {
+        &__text {
+            text-align: right;
+            padding-left: 12px;
+            padding-top: 16px;
+            padding-right: 64px;
+
+        }
+    }
+}
