@@ -7,7 +7,8 @@ const uglify = require('gulp-uglify');
 // html minify
 const htmlmin = require('gulp-htmlmin');
 const { parallel, series } = require('gulp');
-
+// image resize for movie posters
+const imgResize = require('gulp-image-resize');
 
 function styles() {
     return gulp.src('./src/styles/*.scss')
@@ -33,10 +34,20 @@ function html() {
         .pipe(gulp.dest('./dist'))
 }
 
+function resize() {
+    return gulp.src('./src/img/movies/*')
+        .pipe(imgResize({
+            width: 308,
+            height: 456.14,
+        }))
+        .pipe(gulp.dest('./src/img/movies/resized'))
+}
+
 exports.styles = styles;
 exports.images = images;
 exports.scripts = scripts;
 exports.html = html;
+exports.resize = resize;
 
 gulp.task('build', series(images, parallel(styles, scripts, html)));
 gulp.task('watch', function() {
