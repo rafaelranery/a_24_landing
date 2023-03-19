@@ -20,12 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     /* Faq Function */
     let faqArray = document.querySelectorAll('[data-faq-question]');
-    console.log(faqArray);
-
     for (let i = 0; i < faqArray.length; i++) {
         faqArray[i].addEventListener('click', toggleFaq)
         
     }
+
+    /* Newletter Btn Animation */
+    let btnNews = document.querySelector('[data-btn-newsletter]');
+    btnNews.addEventListener('click', function(e) {
+        console.log(e);
+        btnNews.innerText = 'Done';
+        btnNews.classList.add('btn--is-disabled');
+        btnNews.classList.add('disabled');
+        
+    })
 })
 
 function toggleFaq(elemento) {

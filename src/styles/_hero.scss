@@ -33,6 +33,11 @@
         .btn {
             border-bottom-left-radius: 0;
             border-top-left-radius: 0;
+
+            &--is-disabled {
+                background-color: variables.$colorBg;
+                color: green;
+            }
         }
     }
 }

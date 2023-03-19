@@ -31,7 +31,8 @@
                 /* height 0 para 'hidden' da transição para abrir faq */
                 height: 0;
                 overflow: hidden;
-                
+                transition: height, .5s ease;
+                padding: 0 32px;
             }
 
             /* Classe do item aberto, aqui alteramos a classe dentro dele, asism alteramos várias classes e não precisamos aplicar diversas classes no js */
