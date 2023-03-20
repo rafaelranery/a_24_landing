@@ -40,4 +40,29 @@
             }
         }
     }
+
+
+    @media (max-width: variables.$mobile) {
+        .hero {
+
+            
+            &__bg {
+                height: 100vh;
+                object-fit: cover;
+                
+            }
+            
+            &__about {
+                position: absolute;
+                top: 15%;
+                width: 80%;
+                right: 10%;
+                margin: 0 auto;
+                
+                .title {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
 }

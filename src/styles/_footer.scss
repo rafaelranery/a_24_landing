@@ -34,6 +34,7 @@
 
             }
         }
+        
     }
 
     &__meta {
@@ -50,6 +51,32 @@
         }
         a {
             margin-right: 24px;
+        }
+    }
+}
+
+@media (max-width: variables.$mobile) {
+    .footer {
+        text-align: center;
+
+        &__links {
+            display: block;
+            padding: 0;
+
+            &__item {
+                align-items: center;
+                margin: 12px 0;
+                display: block;
+                &__select {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &__meta {
+            display: block;
+            text-align: center;
+            padding: 16px 0;
         }
     }
 }

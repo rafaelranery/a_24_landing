@@ -52,3 +52,13 @@
     
 
 }
+
+@media (max-width: variables.$mobile) {
+    .store {
+
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+    }
+}

@@ -41,3 +41,14 @@
 
     }
 }
+
+@media (max-width: variables.$mobile) {
+    .header {
+        
+        &__nav__list {
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+
+}

@@ -27,3 +27,15 @@
         }
     }
 }
+
+@media (max-width: variables.$mobile) {
+
+    .movies {
+
+        .text--bg {
+            max-width: 90%;
+            font-size: 18px;
+        }
+    }
+    
+}
